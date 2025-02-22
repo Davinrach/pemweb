@@ -1,0 +1,415 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/profileCard"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_marginTop="112dp"
+        android:layout_marginEnd="312dp"
+        app:cardCornerRadius="40dp"
+        app:cardElevation="4dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        >
+
+        <ImageView
+            android:id="@+id/profileImage"
+            android:layout_width="77dp"
+            android:layout_height="84dp"
+            android:scaleType="centerCrop"
+            android:src="@drawable/kakgem"
+            android:background="@drawable/shadow"
+            android:padding="4dp"/>
+    </androidx.cardview.widget.CardView>
+
+    <ImageView
+        android:id="@+id/bannerImage"
+        android:layout_width="415dp"
+        android:layout_height="143dp"
+        android:layout_marginTop="4dp"
+        android:scaleType="centerCrop"
+        android:src="@drawable/banner"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+    <ImageView
+        android:id="@+id/arrowIcon"
+        android:layout_width="31dp"
+        android:layout_height="24dp"
+        android:layout_marginTop="4dp"
+        android:scaleType="centerCrop"
+        android:src="@drawable/baseline_arrow_back_24"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/searchIcon"
+        android:layout_width="31dp"
+        android:layout_height="24dp"
+        android:layout_marginTop="4dp"
+        android:scaleType="centerCrop"
+        android:src="@drawable/baseline_search_24"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.826"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/menuIcon"
+        android:layout_width="31dp"
+        android:layout_height="24dp"
+        android:layout_marginTop="4dp"
+        android:scaleType="centerCrop"
+        android:src="@drawable/baseline_dehaze_24"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.992"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/button"
+        android:layout_width="114dp"
+        android:layout_height="48dp"
+        android:backgroundTint="@android:color/white"
+        android:paddingLeft="20dp"
+        android:paddingRight="20dp"
+        android:text="Edit Profile"
+        android:textColor="@color/black"
+        android:textSize="9sp"
+        app:cornerRadius="20dp"
+        app:strokeColor="@color/gelap"
+        app:strokeWidth="1dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginEnd="15dp"
+        app:layout_constraintTop_toBottomOf="@id/bannerImage"/>
+
+    <TextView
+        android:id="@+id/userName"
+        android:layout_width="84dp"
+        android:layout_height="30dp"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="2dp"
+        android:text="Kak Gem"
+        android:textColor="@color/black"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/profileCard" />
+
+    <TextView
+        android:id="@+id/userNameKecil"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/username"
+        android:textColor="@color/gelap"
+        android:textSize="13sp"
+        android:textStyle="bold"
+        android:layout_marginStart="15dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/userName"
+        android:layout_marginTop="1dp"
+        />
+
+    <TextView
+        android:id="@+id/Bio"
+        android:layout_width="233dp"
+        android:layout_height="18dp"
+        android:ellipsize="end"
+        android:maxLines="3"
+        android:text="Akun Officialnya Kak Gemoy"
+        android:textColor="@color/black"
+        android:textSize="14sp"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_margin="15dp"
+        app:layout_constraintTop_toBottomOf="@id/userNameKecil"
+        />
+
+    <ImageView
+        android:id="@+id/Location"
+        android:layout_width="16dp"
+        android:layout_height="17dp"
+        android:layout_margin="15dp"
+        android:src="@drawable/baseline_add_location_alt_24"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginStart="15dp"
+        app:layout_constraintBottom_toBottomOf="@id/calendar"
+        app:layout_constraintTop_toTopOf="@id/Bio"
+        app:tint="@color/gelap" />
+
+    <TextView
+        android:id="@+id/Loc"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="UINSA, Surabaya"
+        android:textColor="@color/gelap"
+        android:textSize="12sp"
+        app:layout_constraintStart_toStartOf="@id/Location"
+        android:layout_marginStart="25dp"
+        app:layout_constraintTop_toBottomOf="@id/Bio"
+        android:layout_marginTop="7dp"/>
+
+    <ImageView
+        android:id="@+id/calendar"
+        android:layout_width="17dp"
+        android:layout_height="16dp"
+        android:src="@drawable/baseline_calendar_month_24"
+        app:tint="@color/gelap"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginStart="15dp"
+        app:layout_constraintTop_toBottomOf="@id/Location"
+        android:layout_marginTop="7dp"/>
+
+    <TextView
+        android:id="@+id/Join"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Joined May 2019"
+        android:textColor="@color/gelap"
+        android:textSize="12sp"
+        app:layout_constraintStart_toStartOf="@id/calendar"
+        android:layout_marginStart="25dp"
+        app:layout_constraintTop_toBottomOf="@id/Loc"
+        android:layout_marginTop="7dp"
+        />
+
+    <TextView
+        android:id="@+id/AngkaFollowing"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="1 156"
+        android:textSize="14sp"
+        android:textStyle="bold"
+        android:textColor="@color/black"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="15dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/Join"/>
+
+    <TextView
+        android:id="@+id/Following"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Following"
+        android:textSize="12sp"
+        android:textColor="@color/gelap"
+        android:layout_marginStart="40dp"
+        android:layout_marginTop="15dp"
+        app:layout_constraintStart_toStartOf="@id/AngkaFollowing"
+        app:layout_constraintTop_toBottomOf="@id/Join"/>
+
+    <TextView
+        android:id="@+id/AngkaFollowers"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="22,1K"
+        android:textSize="14sp"
+        android:textStyle="bold"
+        android:textColor="@color/black"
+        android:layout_marginStart="70dp"
+        android:layout_marginTop="15dp"
+        app:layout_constraintStart_toStartOf="@id/Following"
+        app:layout_constraintTop_toBottomOf="@id/Join"/>
+
+    <TextView
+        android:id="@+id/Followers"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Following"
+        android:textSize="12sp"
+        android:textColor="@color/gelap"
+        android:layout_marginStart="40dp"
+        android:layout_marginTop="15dp"
+        app:layout_constraintStart_toStartOf="@id/AngkaFollowers"
+        app:layout_constraintTop_toBottomOf="@id/Join"/>
+
+    <TextView
+        android:id="@+id/Tweets"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Tweets"
+        android:textSize="14sp"
+        android:textStyle="bold"
+        android:textColor="@color/black"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="19dp"
+        app:layout_constraintTop_toBottomOf="@id/Followers"/>
+
+    <TextView
+        android:id="@+id/TweetsReplies"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Tweets &amp; replies"
+        android:textSize="14sp"
+        android:textStyle="bold"
+        android:textColor="@color/gelap"
+        app:layout_constraintStart_toStartOf="@id/Tweets"
+        android:layout_marginStart="90dp"
+        android:layout_marginTop="19dp"
+        app:layout_constraintTop_toBottomOf="@id/Followers"/>
+
+    <TextView
+        android:id="@+id/Media"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Media"
+        android:textSize="14sp"
+        android:textStyle="bold"
+        android:textColor="@color/gelap"
+        app:layout_constraintStart_toStartOf="@id/TweetsReplies"
+        android:layout_marginStart="160dp"
+        android:layout_marginTop="19dp"
+        app:layout_constraintTop_toBottomOf="@id/Followers"/>
+
+    <TextView
+        android:id="@+id/Likes"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Likes"
+        android:textSize="14sp"
+        android:textStyle="bold"
+        android:textColor="@color/gelap"
+        app:layout_constraintStart_toStartOf="@id/Media"
+        android:layout_marginStart="90dp"
+        android:layout_marginTop="19dp"
+        app:layout_constraintTop_toBottomOf="@id/Followers"/>
+
+    <View
+        android:id="@+id/garisTebal"
+        android:layout_width="50dp"
+        android:layout_height="4dp"
+        android:background="#0000FF"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="5dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/Tweets"/>
+
+    <View
+        android:id="@+id/garisTipis"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#B0B0B0"
+        android:layout_marginTop="8dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/Tweets"/>
+
+    <ImageView
+        android:id="@+id/pinIcon"
+        android:layout_width="18dp"
+        android:layout_height="15dp"
+        android:layout_marginTop="4dp"
+        android:scaleType="centerCrop"
+        android:src="@drawable/pin"
+        android:layout_marginStart="40dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/garisTipis" />
+
+    <TextView
+        android:id="@+id/pinText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Pinned Tweet"
+        android:textSize="10sp"
+        android:textStyle="bold"
+        android:textColor="@color/gelap"
+        app:layout_constraintStart_toStartOf="@id/pinIcon"
+        android:layout_marginStart="25dp"
+        android:layout_marginTop="5dp"
+        app:layout_constraintTop_toBottomOf="@id/garisTipis"/>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/profilKonten"
+        android:layout_width="65dp"
+        android:layout_height="65dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="15dp"
+        app:cardCornerRadius="40dp"
+        app:cardElevation="4dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/pinIcon"
+
+        >
+
+        <ImageView
+            android:id="@+id/profilImage"
+            android:layout_width="65dp"
+            android:layout_height="65dp"
+            android:scaleType="centerCrop"
+            android:src="@drawable/kakgem"
+            android:background="@drawable/shadow"
+            android:padding="4dp"/>
+    </androidx.cardview.widget.CardView>
+
+    <TextView
+        android:id="@+id/UNkontenbesar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Kak Gem"
+        android:textStyle="bold"
+        android:textSize="16sp"
+        android:textColor="@color/black"
+        android:layout_marginStart="80dp"
+        android:layout_marginTop="15dp"
+        app:layout_constraintStart_toStartOf="@id/profilKonten"
+        app:layout_constraintTop_toBottomOf="@id/pinIcon"
+        />
+
+    <TextView
+        android:id="@+id/UNkontenkecil"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/username"
+        android:textSize="12sp"
+        android:textColor="#888888"
+        android:layout_marginStart="4dp"
+        app:layout_constraintStart_toEndOf="@id/UNkontenbesar"
+        app:layout_constraintBottom_toBottomOf="@id/UNkontenbesar"
+        />
+
+    <TextView
+        android:id="@+id/time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="2h"
+        android:textSize="12sp"
+        android:textColor="@color/gelap"
+        android:layout_marginTop="4dp"
+        android:layout_marginStart="5dp"
+        app:layout_constraintStart_toEndOf="@id/UNkontenkecil"
+        app:layout_constraintBottom_toBottomOf="@id/UNkontenkecil"/>
+
+    <TextView
+        android:id="@+id/tweetContent"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Kak Gem lagi makan besar Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed pulvinar nunc a odio maximus consequat. Integer et mi enim. Maecenas tincidunt magna sit amet dui egestas, ut sodales quam iaculis. Maecenas consequat bibendum arcu, quis facilisis magna eleifend id. Nam pellentesque, ligula eget suscipit ullamcorper,
+        augue tellus mollis neque, eget rhoncus dui purus eu velit."
+        android:textSize="14sp"
+        android:textColor="@color/black"
+        android:layout_marginTop="4dp"
+        android:layout_marginEnd="15dp"
+        app:layout_constraintStart_toStartOf="@id/UNkontenbesar"
+        app:layout_constraintTop_toBottomOf="@id/UNkontenbesar"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+    <ImageView
+        android:id="@+id/tweetImage"
+        android:layout_width="270dp"
+        android:layout_height="200dp"
+        android:scaleType="centerCrop"
+        android:src="@drawable/paham"
+        app:layout_constraintStart_toStartOf="@id/UNkontenbesar"
+        app:layout_constraintTop_toBottomOf="@id/tweetContent"
+        android:layout_marginTop="8dp"/>
+</androidx.constraintlayout.widget.ConstraintLayout>
